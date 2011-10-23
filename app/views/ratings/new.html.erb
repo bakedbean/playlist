@@ -1,0 +1,15 @@
+<h1>Rate "<%= @tune[:title] %>"</h1>
+
+<%= link_to "back", tunes_path %>
+
+<%= form_for([@tune,@rating]) do |f| %>
+	<%= f.hidden_field :value, :value => 0 %>
+	
+	<% (1..5).each do |n| %>
+		<%= image_tag('star_off.png', :class => "star", :id => n) %>
+	<% end %>
+	
+	<div class="actions">
+	 	<%= f.submit "Rate!" %>
+	</div>
+<% end %>

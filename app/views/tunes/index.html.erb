@@ -1,0 +1,31 @@
+<h1>Saved Tunes</h1>
+<%= link_to "add new tune", new_tune_path %> | <%= link_to "playlist", "Javascript: $('#playlist').toggle();" %>
+
+<div id="playlist" style="display: none;">
+	<%= form_tag playlist_path do %>
+		Artist Name: <%= text_field_tag 'name' %> Rating: <%= text_field_tag 'rating', '', :size => 4 %> <%= submit_tag "Create Playlist" %>
+	<% end %>
+</div>
+
+<table summary="list of tunes">
+	<tr>
+		<th></th>
+		<th>Title</th>
+		<th>Artist</th>
+		<th>Duration (seconds)</th>
+		<th>Average Rating</th>
+	</tr>
+	<% @tunes.each do |tune| %>
+		<tr>
+			<td><%= link_to "delete", tune, :method => :delete, :confirm => "Are you sure" %> | <%= link_to "rate", new_tune_rating_path(tune)%></td>
+			<td><%= tune[:title] %></td>
+			<td><%= tune[:artist_name] %></td>
+			<td><%= tune[:duration] %></td>
+			<td>
+				<% tune.average_rating.times { %>
+					<%= image_tag('star_on.png', :width => 15, :height => 15) %>
+				<% } %>
+			</td>
+		</tr>
+	<% end %>
+</table>

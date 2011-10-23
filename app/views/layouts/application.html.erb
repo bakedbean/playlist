@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BerkleeApp</title>
+  <%= stylesheet_link_tag	'blueprint/screen', :media => 'screen' %>
+	<%= stylesheet_link_tag	'blueprint/print', 	:media => 'print' %>
+	<%= stylesheet_link_tag	'custom', 					:media => 'screen' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	
+	<div id="container">
+		
+		<section>
+			<% flash.each do |key, value| %>
+				<div class="flash <%= key %>"><%= value %></div>
+			<% end %>
+		</section>
+		
+		<%= yield %>
+	</div>
+
+<%= javascript_include_tag "application" %>
+</body>
+</html>
