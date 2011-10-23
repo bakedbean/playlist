@@ -32,5 +32,5 @@ end
 group :production do
 	gem 'execjs'
 	gem 'therubyracer'
-#	gem 'pg'
+	gem 'pg'
 end
