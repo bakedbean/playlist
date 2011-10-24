@@ -1,6 +1,18 @@
+header {
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 10px;
+	padding: 0 0 10px 0;
+	border-bottom: 3px solid #ccc;
+	font-size: 2em;
+}
+
+h1 {
+	font-size: 1.75em;
+}
+
 #container {
 	padding: 10px 0 10px 0;
-	border-top: 1px solid #CCCCCC;
 	margin-left: 15%;
 	margin-right: 15%;
 	font-size: 1.25em;
