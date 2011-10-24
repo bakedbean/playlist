@@ -7,6 +7,9 @@ gem 'rails', '3.1.0'
 
 gem 'sqlite3'
 
+group :assets do
+  gem 'uglifier'
+end
 
 group :development do
 	gem 'rspec-rails'
