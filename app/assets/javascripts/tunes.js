@@ -10,3 +10,7 @@ $(".rating").bind('ajax:success', function() {
 		}
 	});
 });
+
+$('.lnk_playlist').click(function(){
+	$('#playlist').toggle();
+});

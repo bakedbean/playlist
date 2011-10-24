@@ -1,5 +1,5 @@
 <h1>Saved Tunes</h1>
-<%= link_to "add new tune", new_tune_path %> | <%= link_to "playlist", "Javascript: $('#playlist').toggle();" %>
+<%= link_to "add new tune", new_tune_path %> | <%= link_to "playlist", "Javascript: void(0);", :class => "lnk_playlist" %>
 
 <div id="playlist" style="display: none;">
 	<%= form_tag playlist_path do %>
