@@ -48,7 +48,6 @@ class TunesController < ApplicationController
 
     if File.exists?(filename)
       send_file filename, :type => 'audio/x-mpegurl'
-      #render :nothing => true
     else
       flash[:error] = "No files available, please add some tunes."
       redirect_to tunes_path
