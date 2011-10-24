@@ -26,7 +26,11 @@ class TunesController < ApplicationController
   def playlist
     tunes = search(params[:name],params[:rating]).sort_by { rand }
     
-    filename = "#{Rails.public_path}/playlists/playlist_#{DateTime.now.hour}#{DateTime.now.min}#{DateTime.now.sec}.m3u"
+    if Rails.env == "development"
+      filename = "#{Rails.public_path}/playlists/playlist_#{DateTime.now.hour}#{DateTime.now.min}#{DateTime.now.sec}.m3u"
+    else
+      filename = "#{Rails.root}/tmp/playlist_#{DateTime.now.hour}#{DateTime.now.min}#{DateTime.now.sec}.m3u"
+    end
     
     unless tunes.blank?
     
