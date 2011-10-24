@@ -297,3 +297,11 @@ REQUESTING PAGE: POST /tunes with {"utf8"=>"✓", "tune"=>{"url"=>"", "title"=>"
 REQUESTING PAGE: GET /tunes/new with {} and HTTP headers {}
 REQUESTING PAGE: POST /tunes with {"utf8"=>"✓", "tune"=>{"url"=>"/songs/some_tune.mp3", "title"=>"Some Song", "artist_name"=>"Some Guy", "duration"=>"250"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/tunes/new"}
 REQUESTING PAGE: GET http://www.example.com/tunes with {} and HTTP headers {"HTTP_REFERER"=>"/tunes"}
+REQUESTING PAGE: GET /tunes/1/ratings/new with {} and HTTP headers {}
+REQUESTING PAGE: POST /tunes/1/ratings with {"utf8"=>"✓", "rating"=>{"value"=>"2"}, "commit"=>"Apply Rating"} and HTTP headers {"HTTP_REFERER"=>"/tunes/1/ratings/new"}
+REQUESTING PAGE: GET http://www.example.com/tunes with {} and HTTP headers {"HTTP_REFERER"=>"/tunes/1/ratings"}
+REQUESTING PAGE: GET /tunes/new with {} and HTTP headers {}
+REQUESTING PAGE: POST /tunes with {"utf8"=>"✓", "tune"=>{"url"=>"", "title"=>"", "artist_name"=>"", "duration"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/tunes/new"}
+REQUESTING PAGE: GET /tunes/new with {} and HTTP headers {}
+REQUESTING PAGE: POST /tunes with {"utf8"=>"✓", "tune"=>{"url"=>"/songs/some_tune.mp3", "title"=>"Some Song", "artist_name"=>"Some Guy", "duration"=>"250"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/tunes/new"}
+REQUESTING PAGE: GET http://www.example.com/tunes with {} and HTTP headers {"HTTP_REFERER"=>"/tunes"}
